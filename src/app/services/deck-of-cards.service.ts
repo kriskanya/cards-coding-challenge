@@ -6,7 +6,7 @@ import { CardsAPIResponse, PileAPIResponse, DrawnCard } from '../models/cards.mo
   providedIn: 'root'
 })
 export class DeckOfCardsService {
-  private BASE_URL = 'http://deckofcardsapi.com/api/deck';
+  private BASE_URL = 'https://deckofcardsapi.com/api/deck';
 
   constructor(private http: HttpClient) { }
 
