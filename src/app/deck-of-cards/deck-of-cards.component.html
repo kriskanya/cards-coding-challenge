@@ -1,0 +1,19 @@
+<div class="modal" *ngIf="showModal">
+  <h1>You win!</h1>
+  <button (click)="showModal=false">X</button>
+</div>
+
+<div class="container">
+  <h1>Concentration Card Game --- Cards Remaining: {{ cardsRemaining }}</h1>
+  <button (click)="newGame()">New Game</button>
+
+  <div *ngFor="let i of [0, 1, 2, 3]">
+    <ng-container *ngFor="let card of piles[i]?.piles['pile' + i].cards">
+      <div class="playing-card" (click)="addCardToMatchArray($event, card)"
+           [class.disable-click]="disableClick">
+        <img *ngIf="!card.isVisible" src="../../assets/playing-card-back.png">
+        <img *ngIf="card.isVisible" [src]="getImgSrc(card)">
+      </div>
+    </ng-container>
+  </div>
+</div>
