@@ -23,6 +23,6 @@ export class DeckOfCardsService {
   }
 
   listCardsInPile(deckId, pileName) {
-    return this.http.get<PileAPIResponse>(`${ this.BASE_URL }/${ deckId }/pile/${ pileName }/list`);
+    return this.http.get<PileAPIResponse>(`${ this.BASE_URL }/${ deckId }/pile/${ pileName }/list/`);
   }
 }

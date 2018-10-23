@@ -50,8 +50,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cards-coding-challenge:build",
-            "proxyConfig": "proxy.conf.json"
+            "browserTarget": "cards-coding-challenge:build"
           },
           "configurations": {
             "production": {
